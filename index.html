@@ -3,7 +3,22 @@
 <head>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
-  <script>
+ 
+  </head>
+
+ <body>
+ 
+<div class="col-lg-4" style="margin:20px">
+  <p class="lead" id="loading">loading...</p>
+  <Form id="employeeList" style="display:none">
+<input id="employeeSelect" placeholder="請輸入ID"  class="form-control"></input>
+    <input type="submit" class="btn btn-info" value="查詢結果" style="margin-top:10px"/>
+    </Form>
+  
+
+  <p class="lead" id="employeeDetails" style="display:none"> </p>
+</div>
+ <script>
    var employeeData;
 $(document).ready(function(){
   $.get( "https://sheets.googleapis.com/v4/spreadsheets/1lyzd2nm16jFZKoQU_aL8N7ppB-AQ9oAxQpUa_09qMgM/values/result!D2:AV1000?key=AIzaSyB5WTjIR5OZt108xl9uQApzeoNRWuMyYRE", function( data ) {
@@ -80,21 +95,6 @@ function displayEmployee(name){
   }
 }
 </script>
-
-  </head>
-
- <body>
- 
-<div class="col-lg-4" style="margin:20px">
-  <p class="lead" id="loading">loading...</p>
-  <Form id="employeeList" style="display:none">
-<input id="employeeSelect" placeholder="請輸入ID"  class="form-control"></input>
-    <input type="submit" class="btn btn-info" value="查詢結果" style="margin-top:10px"/>
-    </Form>
-  
-
-  <p class="lead" id="employeeDetails" style="display:none"> </p>
-</div>
 
 </body>
 </html>
