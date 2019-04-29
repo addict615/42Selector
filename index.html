@@ -23,7 +23,7 @@
 </div>
 
 <p ><h2>Step2.計算結果</h2></p> 
-<div class="col-lg-4"  id=here style="margin:10px">
+<div class="col-lg-4" style="margin:10px">
   <p class="lead" id="loading">loading...</p>
   <Form id="employeeList" style="display:none">
 <input id="employeeSelect" placeholder="請輸入ID"  class="form-control"></input>
@@ -51,11 +51,8 @@ $(document).ready(function(){
     $('#loading').hide();
 });
 });
+  
    
-function updateDiv()
-{ 
-    $( "#here" ).load(window.location.href + " #here" );
-}
 
 $('#employeeList').submit(function(e){
   e.preventDefault();
