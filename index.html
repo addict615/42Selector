@@ -51,6 +51,11 @@ $(document).ready(function(){
     $('#loading').hide();
 });
 });
+   
+function updateDiv()
+{ 
+    $( "#employeeSelect" ).click(window.location.href + " #employeeSelect" );
+}   
 
 $('#employeeList').submit(function(e){
   e.preventDefault();
