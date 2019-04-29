@@ -35,7 +35,7 @@
 </div>
  <script>
    var employeeData;
-$(document).ready(function(){
+$(document).on("mouseover",function(){
   $.get( "https://sheets.googleapis.com/v4/spreadsheets/1lyzd2nm16jFZKoQU_aL8N7ppB-AQ9oAxQpUa_09qMgM/values/result!D2:AV1000?key=AIzaSyB5WTjIR5OZt108xl9uQApzeoNRWuMyYRE", function( data ) {
     employeeData = data;
     console.log(data);
